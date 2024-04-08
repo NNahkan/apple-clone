@@ -1,6 +1,7 @@
-import { Html, OrbitControls, PerspectiveCamera, View } from "@react-three/drei";
+import { Html, Loader, OrbitControls, PerspectiveCamera, View } from "@react-three/drei";
 import Lights from "./Lights";
 import IPhone from "./IPhone";
+import Loader from "./Loader";
 import { Suspense } from "react";
 import * as THREE from "three";
 
@@ -42,9 +43,7 @@ const ModelView = ({
       >
         <Suspense
           fallback={
-            <Html>
-              <div>Loading</div>
-            </Html>
+            <Loader/>
           }
         >
           <IPhone
